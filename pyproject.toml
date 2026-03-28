@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "retrace"
+version = "0.1.0"
+description = "The interactive TUI debugger for AI agents."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = ["textual", "typer", "rich"]
+
+[project.scripts]
+retrace = "retrace.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/manishrawal95/retrace"
+Issues = "https://github.com/manishrawal95/retrace/issues"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
